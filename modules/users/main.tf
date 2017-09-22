@@ -4,7 +4,7 @@ resource "github_membership" "membership_for_some_user" {
 }
 
 resource "github_team_membership" "team_membership" {
-  team_id  = "${data.github_team.team.*.id}"
+  team_id  = "${data.github_team.team.id}"
   username = "${var.username}"
   role     = "${var.user_team_role}"
 }

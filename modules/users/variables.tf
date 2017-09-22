@@ -15,8 +15,4 @@ variable "user_team_role" {
   description = "Github role for current team"
 }
 
-variable "team" {
-  type        = "list"
-  default     = []
-  description = "Array of teams"
-}
+variable "team" {}

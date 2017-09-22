@@ -7,8 +7,8 @@ provider "github" {
 module "user" {
   source = "../modules/users"
 
-  username               = "${var.admin_username}"
-  user_organisation_role = "${var.admin_role}"
+  username               = "eledon"
+  user_organisation_role = "member"
   team                   = "${var.admin_teams}"
-  user_team_role         = "${var.admin_role}"
+  user_team_role         = "member"
 }

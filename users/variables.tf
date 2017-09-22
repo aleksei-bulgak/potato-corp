@@ -9,10 +9,17 @@ variable organization_name {
 }
 
 variable "admin_username" {}
-variable "admin_role" {}
+variable "team_role" {
+  default = "maintainer"
+}
+
+variable "admin_role" {
+  default = "member"
+}
 
 variable "admin_teams" {
-  type = "list"
+  type = "string"
+  default = "admins"
 }
 
 variable "team" {

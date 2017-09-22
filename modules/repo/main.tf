@@ -12,6 +12,6 @@ resource "github_repository" "repository" {
 resource "github_repository_deploy_key" "repository_deploy_key" {
   title      = "${github_repository.repository.name} ssh deploy key"
   repository = "${github_repository.repository.name}"
-  key        = "${file(path.module/var.repository_deploy_key_path)}"
+  key        = "${var.repository_deploy_key}"
   read_only  = "false"
 }

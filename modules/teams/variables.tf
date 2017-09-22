@@ -8,6 +8,6 @@ variable "repositories" {
 }
 
 variable "permissions" {
-  type = "string"
+  type    = "string"
   default = "pull"
 }

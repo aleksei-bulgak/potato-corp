@@ -18,3 +18,12 @@ variable "team" {
   default     = []
   description = "Array of teams"
 }
+
+variable "repositories" {
+  type = "list"
+}
+
+variable "repository_deploy_key_path" {
+  type    = "string"
+  default = "deployKey"
+}

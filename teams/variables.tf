@@ -14,6 +14,6 @@ variable "teams" {
 }
 
 variable "repositories" {
-  type = ""
+  type    = ""
   default = []
 }

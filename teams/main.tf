@@ -7,6 +7,6 @@ provider "github" {
 module "organization_team" {
   source = "../modules/teams"
 
-  team = "${var.teams}"
+  team         = "${var.teams}"
   repositories = "${var.repositories}"
 }

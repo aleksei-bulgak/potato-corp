@@ -14,7 +14,7 @@ variable "is_private" {
 
 variable "gitignore_template" {
   type    = "string"
-  default = "java"
+  default = "Java"
 }
 
 variable "license_template" {
@@ -22,7 +22,7 @@ variable "license_template" {
   default = "mit"
 }
 
-variable "repository_deploy_key_path" {
-  default     = "deployKey"
-  description = "Path where ssh deploy key for this repository is stored"
+variable "repository_deploy_key" {
+  default     = ""
+  description = "ssh deploy key for this repository"
 }
