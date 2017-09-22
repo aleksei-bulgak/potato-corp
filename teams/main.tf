@@ -8,4 +8,5 @@ module "organization_team" {
   source = "../modules/teams"
 
   team = "${var.teams}"
+  repositories = "${var.repositories}"
 }

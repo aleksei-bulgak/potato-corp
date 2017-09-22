@@ -4,9 +4,16 @@ resource "github_team" "team" {
   privacy = "closed"
 }
 
-resource "github_team_repository" "team_repository" {
+/*resource "github_team_repository" "team_repository" {
   count      = "${length(var.team)}"
   team_id    = "${github_team.team[count.index].id}"
   repository = "${data.github_repository.public.name}"
   permission = "${element(var.team, count.index)}"
+}*/
+
+resource "github_team_repository" "team_repository" {
+  count      = "${length(var.team) * length(var.repositories)}"
+  team_id    = "${element(github_team.team.*.id, (count.index+1) % length(var.team))}"
+  repository = "${element(var.repositories, (count.index + 1) % length(var.repositories))}"
+  permission = "${var.permissions}"
 }

@@ -12,3 +12,8 @@ variable "teams" {
   type    = "list"
   default = ["admins", "developers", "qa"]
 }
+
+variable "repositories" {
+  type = ""
+  default = []
+}
