@@ -8,11 +8,6 @@ variable organization_name {
   description = "Your organization name"
 }
 
-variable admin_username {
-  type        = "string"
-  description = "Your organization admin"
-}
-
 variable "team" {
   type        = "list"
   default     = []
