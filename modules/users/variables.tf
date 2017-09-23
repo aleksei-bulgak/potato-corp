@@ -15,4 +15,6 @@ variable "user_team_role" {
   description = "Github role for current team"
 }
 
-variable "team" {}
+variable "team" {
+  type = "string"
+}

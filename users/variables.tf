@@ -8,21 +8,7 @@ variable organization_name {
   description = "Your organization name"
 }
 
-variable "admin_username" {}
-variable "team_role" {
-  default = "maintainer"
-}
-
-variable "admin_role" {
-  default = "member"
-}
-
 variable "admin_teams" {
-  type = "string"
+  type    = "string"
   default = "admins"
-}
-
-variable "team" {
-  type    = "list"
-  default = ["admins", "developers", "qa"]
 }
